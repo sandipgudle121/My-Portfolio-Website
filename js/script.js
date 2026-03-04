@@ -56,7 +56,6 @@ window.addEventListener('load', checkScroll);
 window.addEventListener('scroll', checkScroll);
 
 // Contact Form Submission
-<<<<<<< HEAD
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -96,27 +95,6 @@ if (contactForm) {
         }
     });
 }
-=======
-document.querySelector('.contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    const res = await fetch('http://localhost:3001/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message })
-    });
-
-    if (res.ok) {
-        alert('Message sent!');
-        this.reset();
-    } else {
-        alert('Failed to send message.');
-    }
-});
->>>>>>> 6147e9ec9e3da2db9d3319f6434c889f732ffdba
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
