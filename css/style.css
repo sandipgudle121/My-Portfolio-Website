@@ -47,6 +47,12 @@ body {
     color: var(--text-light);
     line-height: 1.6;
     transition: var(--transition);
+    overflow-x: hidden;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -637,6 +643,11 @@ footer {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-image::before {
+        left: 0;
+        top: 0;
     }
 }
 
