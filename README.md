@@ -4,7 +4,7 @@ Welcome to my personal **Developer Portfolio Website**.
 This website showcases my **projects, graphics programming work, and technical skills**.
 
 🔗 **Live Demo:**  
-[Click Here](https://sandipgudle121.github.io/My-Portfolio-Website/)
+[Click Here](https://sandipgudle121.github.io/portfolio/)
 
 ---
 
