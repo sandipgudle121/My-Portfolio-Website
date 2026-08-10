@@ -1,0 +1,14 @@
+{
+  "name": "Sandip Gudle Portfolio",
+  "short_name": "Sandip Gudle",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080b14",
+  "theme_color": "#080b14",
+  "icons": [{
+    "src": "resources/sg-mark.svg",
+    "sizes": "any",
+    "type": "image/svg+xml",
+    "purpose": "any maskable"
+  }]
+}

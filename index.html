@@ -4,471 +4,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sandip Gudle is a Unity gameplay developer and graphics programmer building scalable game systems, rendering tools, and real-time visual experiences.">
+    <meta name="theme-color" content="#080b14">
+    <meta name="author" content="Sandip Gudle">
+    <link rel="canonical" href="https://sandipgudle121.github.io/portfolio/">
 
-    <title>Sandip Gudle | Unity Game Developer & Graphics Programmer</title>
+    <title>Sandip Gudle | Unity Gameplay & Graphics Programmer</title>
 
-    <!-- Open Graph Meta Tags for WhatsApp -->
-    <meta property="og:title" content="Sandip Gudle | Unity Game Developer & Graphics Programmer">
-    <meta property="og:description"
-        content="Unity Game Developer specializing in gameplay systems, OpenGL, and real-time rendering.">
-    <meta property="og:image"
-        content="https://raw.githubusercontent.com/sandipgudle121/My-Portfolio-Website/main/resources/SG.png">
-    <meta property="og:url" content="https://sandipgudle121.github.io/">
+    <meta property="og:title" content="Sandip Gudle | Unity Gameplay & Graphics Programmer">
+    <meta property="og:description" content="Unity gameplay systems, OpenGL rendering, shaders, and real-time graphics programming.">
+    <meta property="og:image" content="https://sandipgudle121.github.io/portfolio/resources/SG.png">
+    <meta property="og:url" content="https://sandipgudle121.github.io/portfolio/">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sandip Gudle | Unity Gameplay & Graphics Programmer">
+    <meta name="twitter:description" content="Unity gameplay systems, OpenGL rendering, shaders, and real-time graphics programming.">
+    <meta name="twitter:image" content="https://sandipgudle121.github.io/portfolio/resources/SG.png">
 
-    <link rel="icon" href="resources/SG.png" type="image/x-icon">
+    <link rel="icon" href="resources/sg-mark.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="resources/SG.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Person",
+        "name":"Sandip Gudle",
+        "url":"https://sandipgudle121.github.io/portfolio/",
+        "jobTitle":"Unity Game Developer and Graphics Programmer",
+        "address":{"@type":"PostalAddress","addressLocality":"Pune","addressCountry":"IN"},
+        "sameAs":["https://github.com/sandipgudle121","https://www.linkedin.com/in/sandip-gudle121","https://x.com/GudleSandeep"]
+    }
+    </script>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <h1 class="logo">Portfolio</h1>
-
-                <div class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                </div>
-
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="logo" href="#home" aria-label="Sandip Gudle home">SG<span>.</span></a>
+            <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#graphics">Graphics</a>
+                <a href="#experience">Experience</a>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#contact">Contact</a>
             </nav>
+            <div class="nav-actions">
+                <a class="nav-resume" href="resources/resume/Sandip_Gudle_Unity_Developer.pdf" target="_blank" rel="noopener noreferrer">Resume <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-
-            <div class="hero-content">
-
-                <h1 class="animate-on-scroll">Sandip Gudle</h1>
-
-                <h2 class="animate-on-scroll">
-                    Unity Game Developer & Graphics Programmer
-                </h2>
-
-                <p class="animate-on-scroll">
-                    Building scalable gameplay systems in Unity while leveraging strong
-                    OpenGL and real-time rendering fundamentals.
-                </p>
-
-                <div class="hero-buttons animate-on-scroll">
-
-                    <a href="#projects" class="btn primary-btn">
-                        View My Work
-                    </a>
-
-                    <a href="resources/resume/Sandip_Gudle_Unity_Devloper_CV.pdf" class="btn secondary-btn"
-                        target="_blank" rel="noopener noreferrer">
-                        Download Unity Developer Resume
-                    </a>
-
-                    <a href="resources/resume/Sandip_Gudle_Unity_Developer_CV.pdf" class="btn secondary-btn"
-                        target="_blank" rel="noopener noreferrer">
-                        Download Graphics Programmer Resume
-                    </a>
-
-                    <a href="#contact" class="btn secondary-btn">
-                        Contact Me
-                    </a>
-
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-grid" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <p class="eyebrow animate-on-scroll">UNITY GAMEPLAY <span>/</span> REAL-TIME GRAPHICS</p>
+                    <h1 class="animate-on-scroll">Unity Developer &amp; Graphics Programmer.</h1>
+                    <p class="hero-lede animate-on-scroll">I build interactive games and real-time graphics systems, from Unity gameplay and mobile UI to low-level rendering with C++, OpenGL, and GLSL.</p>
+                    <div class="hero-buttons animate-on-scroll">
+                        <a href="#projects" class="btn primary-btn">Explore my work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                        <a href="#contact" class="btn secondary-btn">Let’s talk</a>
+                    </div>
+                    <div class="resume-links animate-on-scroll">
+                        <span>Download:</span>
+                        <a href="resources/resume/Sandip_Gudle_Unity_Developer.pdf" target="_blank" rel="noopener noreferrer">Unity Developer CV <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        <a href="resources/resume/Sandip_Gudle_Graphics_Programmer.pdf" target="_blank" rel="noopener noreferrer">Graphics Programmer CV <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
                 </div>
-
+                <div class="hero-visual animate-on-scroll">
+                    <button class="visual-frame image-expand" type="button" data-image="resources/thumbnails/BlackHole.jpg" data-title="Black hole rendering simulation" aria-label="Open black hole rendering image"><img src="resources/thumbnails/BlackHole.jpg" width="1080" height="720" fetchpriority="high" decoding="async" alt="Glowing black hole rendering simulation"></button>
+                    <div class="visual-note"><span class="status-dot"></span> rendering in real time</div>
+                    <div class="visual-code">GLSL<br>OPENGL<br>C++</div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <section id="about" class="about">
-
-        <div class="container">
-
-            <h2 class="section-title animate-on-scroll">
-                About Me
-            </h2>
-
-            <div class="about-content">
-
-                <div class="about-image animate-on-scroll">
-                    <img src="resources/MY_PICTURE.jpg" alt="Sandip Gudle - Unity Game Developer">
-                </div>
-
-                <div class="about-text">
-
-                    <p class="animate-on-scroll">
-                        I am a Unity Game Developer and Graphics Programmer with strong
-                        foundations in real-time rendering and system-level programming.
-                        I build gameplay systems, optimize performance, and design scalable
-                        architectures for interactive applications.
-                    </p>
-
-                    <p class="animate-on-scroll">
-                        Alongside Unity development, I have hands-on experience in OpenGL,
-                        DirectX, and low-level graphics programming using C/C++.
-                        This combination allows me to understand both engine-level development
-                        and rendering pipeline internals.
-                    </p>
-
-                    <div class="skills animate-on-scroll">
-
-                        <h3>Technical Skills</h3>
-
-                        <h4>Unity & Gameplay Development</h4>
-
-                        <div class="skill-tags">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>Gameplay Systems</span>
-                            <span>State Machines</span>
-                            <span>Optimization</span>
-                            <span>Mobile Development</span>
+        <section id="about" class="about section-pad">
+            <div class="container">
+                <div class="section-heading animate-on-scroll"><p class="eyebrow">01 / PROFILE</p><h2>Engine-minded.<br><em>Detail-oriented.</em></h2></div>
+                <div class="about-content">
+                    <div class="about-image animate-on-scroll"><img src="resources/MY_PICTURE.jpg" width="2448" height="2939" loading="lazy" decoding="async" alt="Portrait of Sandip Gudle, Unity game developer"></div>
+                    <div class="about-text">
+                        <p class="lead animate-on-scroll">I build interactive software from the gameplay loop down to the rendering pipeline.</p>
+                        <p class="animate-on-scroll">I am a Unity Game Developer and Graphics Programmer with strong foundations in real-time rendering and system-level programming. I design gameplay systems, optimize performance, and create scalable architectures for interactive applications.</p>
+                        <p class="animate-on-scroll">Alongside Unity development, I work with OpenGL, DirectX, C/C++, and GLSL. That combination helps me reason about both player-facing features and the engine-level systems underneath them.</p>
+                        <div class="skills animate-on-scroll">
+                            <h3>Technical toolkit</h3>
+                            <div class="skill-groups">
+                                <div><h4>Gameplay & Unity</h4><div class="skill-tags"><span>Unity</span><span>C#</span><span>Gameplay Systems</span><span>State Machines</span><span>Optimization</span><span>Mobile</span></div></div>
+                                <div><h4>Graphics & Systems</h4><div class="skill-tags"><span>OpenGL</span><span>OpenGL ES</span><span>DirectX</span><span>GLSL</span><span>C</span><span>C++</span><span>Win32 SDK</span><span>Rendering Pipelines</span></div></div>
+                            </div>
                         </div>
-
-                        <h4 style="margin-top:20px;">
-                            Graphics & Systems Programming
-                        </h4>
-
-                        <div class="skill-tags">
-                            <span>OpenGL</span>
-                            <span>OpenGL-ES</span>
-                            <span>DirectX</span>
-                            <span>GLSL</span>
-                            <span>C</span>
-                            <span>C++</span>
-                            <span>Win32SDK</span>
-                            <span>Rendering Pipeline</span>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </section>
-
-
-    <section id="projects" class="projects">
-
-        <div class="container">
-
-            <!-- ================= UNITY PROJECTS SECTION ================= -->
-            <h2 class="section-title animate-on-scroll">
-                Projects
-            </h2>
-
-            <h3 class="section-subtitle animate-on-scroll" style="margin-top:40px; text-align:center;">
-                Unity Game Development
-            </h3>
-
-            <div class="projects-grid">
-
-                <!-- ================= PROJECT 1: SMASHITT ================= -->
-                <div class="project-card animate-on-scroll">
-
-                    <div class="project-image1">
-                        <img src="resources/thumbnails/smashitt.png" alt="Unity game project">
-                    </div>
-
-                    <div class="project-info">
-
-                        <h3>Smash-it</h3>
-                        <p> Arcade-style object smashing game developed in Unity. Features random spawning, score
-                            tracking, and difficulty scaling based on player performance. </p>
-
-                        <div class="project-tags">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>Level Systems</span>
-                            <span>UI & Score</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://youtu.be/xC9Nzt94mqY?si=sC-5dbPDAzLMOhoh" class="btn small-btn"
-                                target="_blank" rel="noopener noreferrer"> Gameplay
-                                Video </a>
-                            <a href="https://github.com/sandipgudle121/smash-it" class="btn small-btn" target="_blank"
-                                rel="noopener noreferrer">
-                                GitHub </a>
-                            <a href="https://play.unity.com/en/games/a315584a-adfb-4230-9a05-48da43bcb6ca/smashit"
-                                class="btn small-btn" target="_blank" rel="noopener noreferrer"> Play Here </a>
-                        </div>
-                    </div>
+        <section id="projects" class="projects section-pad">
+            <div class="container">
+                <div class="section-heading section-heading-center animate-on-scroll"><p class="eyebrow">02 / SELECTED WORK</p><h2>Things I’ve built.</h2><p>Playable experiments, rendering studies, and systems designed to run in real time.</p></div>
+                <h3 class="section-subtitle animate-on-scroll"><span>Unity</span> / Gameplay development</h3>
+                <div class="projects-grid">
+                    <article class="project-card project-card-featured animate-on-scroll"><div class="project-image"><button class="image-expand" type="button" data-image="resources/thumbnails/smashitt.png" data-title="Smash-it arcade game interface" aria-label="Open Smash-it image"><img src="resources/thumbnails/smashitt.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Smash-it arcade game interface"><span class="image-hint"><i class="fa-solid fa-expand" aria-hidden="true"></i> View image</span></button></div><div class="project-info"><p class="project-index">Featured / 01</p><h3>Smash-it</h3><p>Arcade object-smashing game with random spawning, score tracking, responsive UI, and difficulty scaling driven by player performance.</p><div class="project-tags"><span>Unity</span><span>C#</span><span>Level systems</span><span>UI & score</span></div><div class="case-study"><div><strong>Built</strong><span>Spawning, difficulty scaling, score, and feedback systems</span></div><div><strong>Focus</strong><span>Reusable gameplay flow and player-facing UI</span></div></div><div class="project-links"><a href="https://youtu.be/xC9Nzt94mqY?si=sC-5dbPDAzLMOhoh" class="btn small-btn" target="_blank" rel="noopener noreferrer">Gameplay video <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/sandipgudle121/smash-it" class="text-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://play.unity.com/en/games/a315584a-adfb-4230-9a05-48da43bcb6ca/smashit" class="text-link" target="_blank" rel="noopener noreferrer">Play <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
+                    <article class="project-card animate-on-scroll"><div class="project-image"><img src="resources/thumbnails/EndlessRunner.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Endless Speed-up Unity runner game"></div><div class="project-info"><p class="project-index">Unity / 02</p><h3>Endless Speed-up</h3><p>Fast-paced endless runner featuring continuous movement, obstacle avoidance, and progressively increasing difficulty.</p><div class="project-tags"><span>Unity</span><span>C#</span><span>Player controller</span></div><div class="case-study compact-proof"><div><strong>Built</strong><span>Forward motion, obstacle logic, difficulty ramp, and failure/restart loop</span></div></div><div class="project-links"><a href="https://youtu.be/857NkYfWxQo" class="text-link" target="_blank" rel="noopener noreferrer">Video <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/sandipgudle121/endless-speed-up" class="text-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://play.unity.com/en/games/82fc1db3-8341-43bd-bb77-a1c35a7f47ca/endless-speedup" class="text-link" target="_blank" rel="noopener noreferrer">Play <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
+                    <article class="project-card animate-on-scroll"><div class="project-image"><img src="resources/thumbnails/dodge-it.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Dodge-it Unity 3D game"></div><div class="project-info"><p class="project-index">Unity / 03</p><h3>Dodge-it</h3><p>3D arcade challenge focused on fast reactions, dynamic camera movement, obstacle avoidance, and smooth controls.</p><div class="project-tags"><span>Unity</span><span>C#</span><span>Dynamic camera</span></div><div class="case-study compact-proof"><div><strong>Built</strong><span>Player movement, obstacle response, camera behavior, and level challenge flow</span></div></div><div class="project-links"><a href="https://youtu.be/xZGyoAq9Sfw" class="text-link" target="_blank" rel="noopener noreferrer">Video <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/sandipgudle121/dodge-it" class="text-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://play.unity.com/en/games/da0b6adc-8002-478f-a02e-6bc87d14fe92/dodge-it" class="text-link" target="_blank" rel="noopener noreferrer">Play <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
+                    <article class="project-card animate-on-scroll"><div class="project-image"><img src="resources/thumbnails/boost-it.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Boost-it Unity physics arcade game"></div><div class="project-info"><p class="project-index">Unity / 04</p><h3>Boost-it</h3><p>Physics-based rocket game built around precision controls, timing, particles, and increasingly difficult obstacle-filled levels.</p><div class="project-tags"><span>Unity</span><span>C#</span><span>Physics</span><span>Particles</span></div><div class="case-study compact-proof"><div><strong>Built</strong><span>Rocket thrust controls, collision rules, particle feedback, and level progression</span></div></div><div class="project-links"><a href="https://youtu.be/Iw13P2PUamo" class="text-link" target="_blank" rel="noopener noreferrer">Video <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/sandipgudle121/boost-it" class="text-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://play.unity.com/en/games/485fa5e5-1a33-40b2-ae72-9e34b983a017/boost-it" class="text-link" target="_blank" rel="noopener noreferrer">Play <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
                 </div>
-
-                <!-- ================= PROJECT 2: ENDLESS RUNNER ================= -->
-                <div class="project-card animate-on-scroll">
-
-                    <div class="project-image1">
-                        <img src="resources/thumbnails/EndlessRunner.png" alt="Endless Runner Unity Game">
-                    </div>
-
-                    <div class="project-info">
-
-                        <h3>Endless Speed-up</h3>
-                        <p> Fast-paced endless runner game built in Unity featuring continuous forward movement,
-                            obstacle avoidance, and progressively increasing difficulty for engaging gameplay. </p>
-
-                        <div class="project-tags">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>Player Controller</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://youtu.be/857NkYfWxQo" class="btn small-btn" target="_blank"
-                                rel="noopener noreferrer"> Gameplay Video
-                            </a>
-                            <a href="https://github.com/sandipgudle121/endless-speed-up" class="btn small-btn"
-                                target="_blank" rel="noopener noreferrer"> GitHub
-                            </a>
-                            <a href="https://play.unity.com/en/games/82fc1db3-8341-43bd-bb77-a1c35a7f47ca/endless-speedup"
-                                class="btn small-btn" target="_blank" rel="noopener noreferrer"> Play Here </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= PROJECT 3: DODGE-IT ================= -->
-                <div class="project-card animate-on-scroll">
-
-                    <div class="project-image1">
-                        <img src="resources/thumbnails/dodge-it.png" alt="Dodge-it Unity Game">
-                    </div>
-
-                    <div class="project-info">
-
-                        <h3>Dodge-it</h3>
-                        <p> Dodge, survive in this fast-paced arcade challenge! In this Unity
-                            3D dodging game, you control a player character racing forward while obstacles appear in
-                            your path. React quickly, move left and right, and avoid collisions. Simple controls, smooth
-                            gameplay. </p>
-
-                        <div class="project-tags">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>Dynamic Camera</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://youtu.be/xZGyoAq9Sfw" class="btn small-btn" target="_blank"
-                                rel="noopener noreferrer"> Gameplay Video
-                            </a>
-                            <a href="https://github.com/sandipgudle121/dodge-it" class="btn small-btn" target="_blank"
-                                rel="noopener noreferrer">
-                                GitHub
-                            </a>
-                            <a href="https://play.unity.com/en/games/da0b6adc-8002-478f-a02e-6bc87d14fe92/dodge-it"
-                                class="btn small-btn" target="_blank" rel="noopener noreferrer"> Play Here </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= PROJECT 4: BOOST-IT ================= -->
-                <div class="project-card animate-on-scroll">
-
-                    <div class="project-image1">
-                        <img src="resources/thumbnails/boost-it.png" alt="Boost-it Unity Game">
-                    </div>
-
-                    <div class="project-info">
-
-                        <h3>Boost-it</h3>
-                        <p> Boost-it is a physics-based 3D arcade game built in Unity as part of the GameDev.tv
-                            Unity Courses learning journey. Inspired by the “Project Boost” section from the Complete
-                            Unity 3D Developer course, the game challenges players to pilot a rocket through
-                            increasingly difficult obstacle-filled levels using precision controls and timing. </p>
-
-                        <div class="project-tags">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>ArcadeGame </span>
-                            <span>ParticleEffects</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://youtu.be/Iw13P2PUamo" class="btn small-btn" target="_blank"
-                                rel="noopener noreferrer"> Gameplay Video
-                            </a>
-                            <a href="https://github.com/sandipgudle121/boost-it" class="btn small-btn" target="_blank"
-                                rel="noopener noreferrer">
-                                GitHub
-                            </a>
-                            <a href="https://play.unity.com/en/games/485fa5e5-1a33-40b2-ae72-9e34b983a017/boost-it"
-                                class="btn small-btn" target="_blank" rel="noopener noreferrer"> Play Here </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!-- ================= OPENGL PROJECTS SECTION ================= -->
-            <h3 class="section-subtitle animate-on-scroll" style="margin-top:60px; text-align:center;"> OpenGL &
-                Graphics Programming </h3>
-
-            <div class="projects-grid">
-
-                <!-- ================= PROJECT-1: BLACK HOLE SIMULATION ================= -->
-                <!-- Demonstrates shader-based rendering, physics-inspired visuals, and GLSL usage -->
-                <div class="project-card animate-on-scroll">
-                    <div class="project-image"> <img src="resources/thumbnails/BlackHole.jpg"
-                            alt="Black hole simulation OpenGL"> </div>
-                    <div class="project-info">
-
-                        <h3>Black Hole Simulation</h3>
-                        <p> Real-time black hole simulation using OpenGL and GLSL.
-                            Focuses on gravitational distortion, ray effects, and shader-based visual computation. </p>
-
-                        <div class="project-tags">
-                            <span>OpenGL</span>
-                            <span>GLSL</span>
-                            <span>Physics</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://youtu.be/o5YZZGGUo0g?si=WFQFNOWQvIJO1kZV" class="btn small-btn"
-                                target="_blank"> Demo </a>
-                            <a href="GITHUB_LINK" class="btn small-btn" target="_blank" rel="noopener noreferrer">
-                                GitHub </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= PROJECT-2: OPENGL PRIMITIVES ================= -->
-                <!-- Core graphics pipeline demo using Win32 + OpenGL -->
-                <!-- Covers transformations, lighting models, and shader programming -->
-                <div class="project-card animate-on-scroll">
-
-                    <div class="project-image">
-                        <img src="resources/thumbnails/Primitives.png" alt="OpenGL rendering features project">
-                    </div>
-
-                    <div class="project-info">
-                        <h3>OpenGL Primitives</h3>
-                        <p> Win32-based graphics application demonstrating core OpenGL concepts.
-                            Includes shader pipeline, lighting calculations, transformations, and real-time rendering.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>Win32SDK</span>
-                            <span>OpenGL</span>
-                            <span>C / C++</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://www.linkedin.com/posts/sandip-gudle121_opengl-cprogramming-cplusplus-activity-7355861131170615296-93bb"
-                                class="btn small-btn" target="_blank" rel="noopener noreferrer"> Demo </a>
-                            <a href="https://github.com/sandipgudle121/opengl-primitives" class="btn small-btn"
-                                target="_blank" rel="noopener noreferrer"> GitHub </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= PROJECT-3: CUSTOM GAME ENGINE ================= -->
-                <!-- Advanced system-level project showing engine architecture and rendering pipeline design -->
-                <div class="project-card animate-on-scroll">
-
-                    <div class="project-image">
-                        <img src="resources/thumbnails/GameEngine.png" alt="Custom Game Engine">
-                    </div>
-
-                    <div class="project-info">
-
-                        <h3>Custom Game Engine</h3>
-                        <p>
-                            A custom-built game engine developed using C++, OpenGL and Dear IMGui.
-                            Features modular architecture, rendering pipeline abstraction, input handling,
-                            and basic scene management system.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>C++</span>
-                            <span>OpenGL</span>
-                            <span>Dear ImGui, ImGizmos</span>
-                            <span>Engine Architecture</span>
-                            <span>Rendering Pipeline</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn" target="_blank" rel="noopener noreferrer"> Demo </a>
-                            <a href="https://github.com/sandipgudle121/custom-game-engine" class="btn small-btn"
-                                target="_blank" rel="noopener noreferrer"> GitHub </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="experience">
-        <div class="container">
-            <h2 class="section-title"> Professional Focus </h2>
-            <p style="text-align:center; max-width:800px; margin:0 auto;"> I am actively seeking opportunities in Unity
-                gameplay development, graphics programming, and real-time interactive applications. Open to full-time,
-                freelance, and collaborative projects.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll"> Contact Me </h2>
-
-            <div class="contact-details">
-
-                <div class="contact-block">
-                    <p class="contact-label">Email:</p>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:sandipgudle121@gmail.com">
-                            sandipgudle121@gmail.com
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-block">
-                    <p class="contact-label">Mobile:</p>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+919637659641">
-                            +91 9637659641
-                        </a>
-                    </div>
-                </div>
-
-                <div class="contact-block">
-                    <p class="contact-label">Location:</p>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Pune, India</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo"> Sandip Gudle </div>
-
-                <div class="social-links">
-                    <a href="https://github.com/sandipgudle121"> <i class="fab fa-github"></i> </a>
-                    <a href="http://www.linkedin.com/in/sandip-gudle121"> <i class="fab fa-linkedin"></i> </a>
-                    <a href="https://x.com/GudleSandeep"> <i class="fab fa-twitter"></i> </a>
-                    <a href="https://www.instagram.com/its_sandy_4201"> <i class="fab fa-instagram"></i> </a>
+                <h3 class="section-subtitle animate-on-scroll"><span>OpenGL</span> / Graphics programming</h3>
+                <div class="projects-grid">
+                    <article class="project-card project-card-featured animate-on-scroll"><div class="project-image"><button class="image-expand" type="button" data-image="resources/thumbnails/BlackHole.jpg" data-title="Black hole simulation rendered with OpenGL and GLSL" aria-label="Open Black Hole Simulation image"><img src="resources/thumbnails/BlackHole.jpg" width="1080" height="720" loading="lazy" decoding="async" alt="Black hole simulation rendered with OpenGL and GLSL"><span class="image-hint"><i class="fa-solid fa-expand" aria-hidden="true"></i> View image</span></button></div><div class="project-info"><p class="project-index">Featured / 05</p><h3>Black Hole Simulation</h3><p>Real-time black hole simulation exploring gravitational distortion, ray effects, and shader-based visual computation.</p><div class="project-tags"><span>OpenGL</span><span>GLSL</span><span>Physics</span></div><div class="case-study"><div><strong>Built</strong><span>Shader-driven distortion and ray-based visual effects</span></div><div><strong>Focus</strong><span>Real-time graphics computation and visual experimentation</span></div></div><div class="project-links"><a href="https://youtu.be/o5YZZGGUo0g?si=WFQFNOWQvIJO1kZV" class="btn small-btn" target="_blank" rel="noopener noreferrer">Watch demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
+                    <article class="project-card animate-on-scroll"><div class="project-image"><img src="resources/thumbnails/Primitives.png" width="400" height="294" loading="lazy" decoding="async" alt="OpenGL primitives and lighting demonstration"></div><div class="project-info"><p class="project-index">Graphics / 06</p><h3>OpenGL Primitives</h3><p>Win32-based graphics application demonstrating shader pipelines, lighting calculations, transformations, and real-time rendering.</p><div class="project-tags"><span>Win32 SDK</span><span>OpenGL</span><span>C / C++</span></div><div class="case-study compact-proof"><div><strong>Built</strong><span>Primitive rendering, transforms, lighting calculations, and shader pipeline setup</span></div></div><div class="project-links"><a href="https://www.linkedin.com/posts/sandip-gudle121_opengl-cprogramming-cplusplus-activity-7355861131170615296-93bb" class="text-link" target="_blank" rel="noopener noreferrer">Watch demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/sandipgudle121/opengl-primitives" class="text-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
+                    <article class="project-card animate-on-scroll"><div class="project-image"><img src="resources/thumbnails/GameEngine.png" width="1920" height="1080" loading="lazy" decoding="async" alt="Custom C++ and OpenGL game engine editor"></div><div class="project-info"><p class="project-index">Graphics / 07</p><h3>Custom Game Engine</h3><p>Custom C++ engine with modular architecture, rendering abstraction, input handling, Dear ImGui tooling, and basic scene management.</p><div class="project-tags"><span>C++</span><span>OpenGL</span><span>Dear ImGui</span><span>Engine architecture</span></div><div class="case-study compact-proof"><div><strong>Built</strong><span>Rendering architecture, camera flow, material handling, asset loading, and editor tooling</span></div></div><div class="project-links"><a href="https://github.com/sandipgudle121/custom-game-engine" class="text-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article>
                 </div>
             </div>
+        </section>
 
-            <div class="footer-bottom">
-                <p> © 2025 Sandip Gudle. All Rights Reserved. </p>
+        <section id="graphics" class="graphics section-pad">
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                    <p class="eyebrow">03 / RENDERING</p>
+                    <h2>Graphics work below<br><em>the engine layer.</em></h2>
+                    <p>A focused look at the rendering side of my portfolio: shader programming, OpenGL systems, GPU-oriented thinking, and custom engine exploration.</p>
+                </div>
+                <div class="graphics-grid">
+                    <article class="graphics-item animate-on-scroll"><span>01</span><h3>Rendering pipelines</h3><p>OpenGL rendering flow, shader stages, VAO/VBO setup, texture handling, material systems, and scene rendering.</p></article>
+                    <article class="graphics-item animate-on-scroll"><span>02</span><h3>Shaders & real-time visuals</h3><p>GLSL vertex and fragment shaders, lighting, transformations, distortion effects, and real-time visual computation.</p></article>
+                    <article class="graphics-item animate-on-scroll"><span>03</span><h3>Custom engine direction</h3><p>C++ and Win32-based systems with Dear ImGui tooling, Assimp asset loading, camera systems, and rendering architecture.</p></article>
+                </div>
+                <div class="graphics-stack animate-on-scroll">
+                    <span>C++</span><span>OpenGL</span><span>OpenGL ES</span><span>GLSL</span><span>DirectX 11</span><span>Win32</span><span>Dear ImGui</span><span>Assimp</span><span>WebGL</span>
+                </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <section id="experience" class="experience section-pad">
+            <div class="container">
+                <div class="section-heading animate-on-scroll">
+                    <p class="eyebrow">04 / PROFESSIONAL EXPERIENCE</p>
+                    <h2>Commercial game work,<br><em>shaped into systems.</em></h2>
+                    <p>Remote Unity internships across mobile simulation, horror gameplay, UI systems, interaction flow, debugging, and Git-based team development.</p>
+                </div>
+                <div class="experience-list">
+                    <article class="experience-item animate-on-scroll">
+                        <div class="experience-meta">
+                            <span class="experience-period">Jun 2026 — Present</span>
+                            <span class="experience-type">Rural Games · Remote</span>
+                        </div>
+                        <div class="experience-body">
+                            <div class="experience-heading">
+                                <div>
+                                    <p class="experience-role">Unity Developer Intern</p>
+                                    <h3>BlinkNow / Delivery Empire Simulator</h3>
+                                </div>
+                                <span class="experience-number">01</span>
+                            </div>
+                            <p class="experience-project"><strong>Genre:</strong> Business simulation / tycoon / mobile management game.</p>
+                            <p>Working on a Unity 6 URP mobile simulation game focused on running and expanding a retail and delivery business. My contribution centers on player-facing UI, interaction feedback, mobile input, notification flow, pause behavior, and inventory/order logic.</p>
+                            <div class="experience-focus">
+                                <div><strong>UI systems</strong><span>HUD, money/time/objective displays, interaction prompts, pause menu, notifications, reusable UI prefabs, and mobile-friendly layouts.</span></div>
+                                <div><strong>Gameplay systems</strong><span>Purchase requests, shelf inventory, stock validation, rider/customer orders, order fulfillment, and product or box spawning.</span></div>
+                                <div><strong>Mobile & collaboration</strong><span>Touch controls, fixed joystick flow, landscape UI, Git branches, merge conflict resolution, package files, and prefab integration.</span></div>
+                            </div>
+                            <div class="experience-tags"><span>Unity 6 LTS</span><span>URP</span><span>C#</span><span>Android</span><span>TextMeshPro</span><span>GitHub</span></div>
+                        </div>
+                    </article>
+                    <article class="experience-item animate-on-scroll">
+                        <div class="experience-meta">
+                            <span class="experience-period">Dec 2025 — Jun 2026</span>
+                            <span class="experience-type">Akiyam Solutions · Remote</span>
+                        </div>
+                        <div class="experience-body">
+                            <div class="experience-heading">
+                                <div>
+                                    <p class="experience-role">Unity Developer Intern</p>
+                                    <h3>Sanity’s Echo: Prison</h3>
+                                </div>
+                                <span class="experience-number">02</span>
+                            </div>
+                            <p class="experience-project"><strong>Genre:</strong> 3D horror / psychological horror game.</p>
+                            <p>Contributed to a 3D horror project in Unity and C#, implementing gameplay functionality, interactive objects, level features, asset and UI integration, debugging, optimization support, and design-driven refinements.</p>
+                            <div class="experience-focus">
+                                <div><strong>Core contribution</strong><span>Gameplay systems, interactive mechanics, player interactions, scene components, and level functionality.</span></div>
+                                <div><strong>Production support</strong><span>Integrated assets and UI feedback, fixed runtime issues, improved gameplay feel, and supported designer/developer collaboration.</span></div>
+                            </div>
+                            <div class="experience-tags"><span>Unity</span><span>C#</span><span>3D game development</span><span>Gameplay programming</span><span>UI</span><span>Git</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="capabilities section-pad"><div class="container"><div class="section-heading animate-on-scroll"><p class="eyebrow">05 / CAPABILITIES</p><h2>From first frame<br><em>to final polish.</em></h2></div><div class="proof-strip animate-on-scroll"><div><strong>Open source work</strong><span>Playable Unity projects and C++ graphics repositories</span></div><div><strong>Two directions</strong><span>Focused resumes for gameplay and graphics roles</span></div><div><strong>Based in</strong><span>Pune, India · open to collaboration</span></div></div><div class="capability-grid"><article class="capability animate-on-scroll"><span>01</span><h3>Gameplay systems</h3><p>Player controllers, state machines, progression, UI feedback, and reusable Unity architecture.</p></article><article class="capability animate-on-scroll"><span>02</span><h3>Rendering & shaders</h3><p>OpenGL, GLSL, lighting, transformations, shader pipelines, and real-time visual computation.</p></article><article class="capability animate-on-scroll"><span>03</span><h3>Performance thinking</h3><p>System-level debugging and optimization across engine code, graphics pipelines, and mobile targets.</p></article></div><div class="proof-links animate-on-scroll"><a href="https://github.com/sandipgudle121" target="_blank" rel="noopener noreferrer">View GitHub profile <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="resources/resume/Sandip_Gudle_Unity_Developer.pdf" target="_blank" rel="noopener noreferrer">Unity resume <i class="fa-solid fa-download" aria-hidden="true"></i></a><a href="resources/resume/Sandip_Gudle_Graphics_Programmer.pdf" target="_blank" rel="noopener noreferrer">Graphics resume <i class="fa-solid fa-download" aria-hidden="true"></i></a></div></div></section>
+
+        <section id="contact" class="contact section-pad"><div class="container contact-inner"><div class="section-heading animate-on-scroll"><p class="eyebrow">06 / CONTACT</p><h2>Have a system<br><em>worth building?</em></h2><p>I’m actively seeking opportunities in Unity gameplay development, graphics programming, and real-time interactive applications.</p></div><div class="contact-details animate-on-scroll"><a class="contact-item" href="mailto:sandipgudle121@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i><span>sandipgudle121@gmail.com</span></a><a class="contact-item" href="tel:+919637659641"><i class="fas fa-phone" aria-hidden="true"></i><span>+91 9637659641</span></a><div class="contact-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Pune, India</span></div></div></div></section>
+        <div class="image-modal" role="dialog" aria-modal="true" aria-label="Project image preview" tabindex="-1" hidden><button class="modal-close" type="button" aria-label="Close image preview">&times;</button><img alt=""><p></p></div>
+    </main>
+
+    <footer><div class="container footer-content"><div><div class="footer-logo">Sandip Gudle<span>.</span></div><p>Unity gameplay & real-time graphics.</p></div><div class="social-links"><a href="https://github.com/sandipgudle121" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/sandip-gudle121" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a><a href="https://x.com/GudleSandeep" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a><a href="https://www.instagram.com/its_sandy_4201" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></div></div><div class="footer-bottom"><p>© 2026 Sandip Gudle. All rights reserved.</p></div></footer>
     <script src="js/script.js"></script>
 </body>
 

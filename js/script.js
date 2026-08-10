@@ -1,122 +1,131 @@
-// ================= DOM ELEMENTS =================
+const body = document.body;
 const themeToggle = document.querySelector('.theme-toggle');
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const navLinksItems = document.querySelectorAll('.nav-links a');
-const contactForm = document.querySelector('.contact-form');
-const header = document.querySelector('header');
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('.site-nav');
+const header = document.querySelector('.site-header');
 
-// ================= THEME TOGGLE =================
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
+// Theme preference with a system fallback.
+const savedTheme = localStorage.getItem('theme');
+const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+if (savedTheme === 'light' || (!savedTheme && prefersLight)) body.classList.add('light-mode');
 
-        const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
-    });
+function updateThemeButton() {
+    const isLight = body.classList.contains('light-mode');
+    themeToggle?.setAttribute('aria-pressed', String(isLight));
+    themeToggle?.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+}
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
+themeToggle?.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
+    updateThemeButton();
+});
+updateThemeButton();
+
+function closeMenu() {
+    siteNav?.classList.remove('is-open');
+    menuToggle?.classList.remove('is-open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Open menu');
+}
+
+menuToggle?.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('is-open');
+    menuToggle.classList.toggle('is-open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+});
+
+siteNav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+
+// Lightweight image preview for the strongest project visuals.
+const imageModal = document.querySelector('.image-modal');
+const modalImage = imageModal?.querySelector('img');
+const modalCaption = imageModal?.querySelector('p');
+const modalClose = imageModal?.querySelector('.modal-close');
+const imageButtons = document.querySelectorAll('.image-expand');
+let lastModalTrigger = null;
+
+function closeImageModal() {
+    if (!imageModal) return;
+    const shouldRestoreFocus = !imageModal.hidden;
+    imageModal.hidden = true;
+    modalImage?.removeAttribute('src');
+    body.classList.remove('modal-open');
+    if (shouldRestoreFocus && lastModalTrigger) lastModalTrigger.focus();
+}
+
+imageButtons.forEach((button) => button.addEventListener('click', () => {
+    if (!imageModal || !modalImage) return;
+    lastModalTrigger = button;
+    modalImage.src = button.dataset.image;
+    modalImage.alt = button.dataset.title || 'Project image preview';
+    if (modalCaption) modalCaption.textContent = button.dataset.title || '';
+    imageModal.hidden = false;
+    body.classList.add('modal-open');
+    modalClose?.focus();
+}));
+modalClose?.addEventListener('click', closeImageModal);
+imageModal?.addEventListener('click', (event) => {
+    if (event.target === imageModal) closeImageModal();
+});
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Tab' && imageModal && !imageModal.hidden) {
+        const focusableElements = imageModal.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+
+        if (firstFocusable && lastFocusable) {
+            if (event.shiftKey && document.activeElement === firstFocusable) {
+                event.preventDefault();
+                lastFocusable.focus();
+            } else if (!event.shiftKey && document.activeElement === lastFocusable) {
+                event.preventDefault();
+                firstFocusable.focus();
+            }
+        }
     }
-}
 
-// ================= MOBILE NAV =================
-if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
+    if (event.key === 'Escape') {
+        closeImageModal();
+        closeMenu();
+    }
+});
 
-    navLinksItems.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-        });
-    });
-}
-
-// ================= SCROLL ANIMATION (OPTIMIZED) =================
+// Reveal content progressively, while keeping it visible if observers are unsupported.
 const animatedElements = document.querySelectorAll('.animate-on-scroll');
+if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                currentObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    animatedElements.forEach((element) => observer.observe(element));
+} else {
+    animatedElements.forEach((element) => element.classList.add('show'));
+}
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target); // animate once
-        }
-    });
-}, {
-    threshold: 0.2
-});
+// Close the mobile menu when the viewport becomes desktop-sized.
+const desktopMediaQuery = window.matchMedia('(min-width: 721px)');
+if (desktopMediaQuery.addEventListener) {
+    desktopMediaQuery.addEventListener('change', closeMenu);
+} else if (desktopMediaQuery.addListener) {
+    desktopMediaQuery.addListener(closeMenu);
+}
 
-animatedElements.forEach(el => observer.observe(el));
-
-// ================= SMOOTH SCROLL =================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-
-        if (targetId === "#") return;
-
-        const target = document.querySelector(targetId);
-        if (target) {
-            e.preventDefault();
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// ================= HEADER HIDE/SHOW =================
-let lastScrollY = window.scrollY;
+// Add a subtle separation once the page starts moving.
 let ticking = false;
-
-function handleScroll() {
+function updateHeader() {
     const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        header.style.transform = 'translateY(0)';
-    }
-
-    lastScrollY = currentScrollY;
+    header?.classList.toggle('scrolled', currentScrollY > 12);
     ticking = false;
 }
-
 window.addEventListener('scroll', () => {
     if (!ticking) {
-        window.requestAnimationFrame(handleScroll);
+        window.requestAnimationFrame(updateHeader);
         ticking = true;
     }
-});
-
-// ================= CONTACT FORM (NO SERVER) =================
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        if (!name || !email || !message) {
-            alert('Please fill all fields');
-            return;
-        }
-
-        // Open user's email client
-        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-        const body = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-        );
-
-        window.location.href = `mailto:sandipgudle121@gmail.com?subject=${subject}&body=${body}`;
-
-        contactForm.reset();
-    });
-}
+}, { passive: true });
